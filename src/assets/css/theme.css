@@ -11453,7 +11453,8 @@ a:focus, button:focus {
 
 .cf-signin__logo {
   padding-bottom: 24px;
-  max-width: 250px; }
+  max-width: 250px;
+  margin: 0 auto; }
 
 .cf-inventory-list__image {
   border-radius: 0.5rem; }
