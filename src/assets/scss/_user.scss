@@ -1,0 +1,56 @@
+// 
+// user.scss
+// Use this to write your custom SCSS
+//
+
+
+.btn-primary {
+    background-color: $color-4;
+    border-color: $color-4;
+
+    &:hover {
+        background-color: darken($color-4, 10%);
+        border-color: $color-4;
+    }
+}
+
+// Sign In Page
+
+.cf-signin {
+
+    &__image {
+        min-height: 500px;
+        background: url('/assets/img/illustrations/cf-phone-touch.svg') center center / contain no-repeat;
+    }
+
+    &__logo {
+        padding-bottom: 32px;
+    }
+}
+
+// Inventory List Page
+
+.cf-inventory-list {
+
+    &__image {
+        border-radius: 0.5rem;
+
+        img {
+            padding: 20px;
+        }
+    }
+
+    .item-color {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 5px;
+    }
+
+    .item-wrapper {
+
+        .item-title {
+            padding-left: 16px;
+        }
+    }
+}
