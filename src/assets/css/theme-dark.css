@@ -11488,12 +11488,38 @@ a:focus, button:focus {
   border-right-color: #1E3A5C;
   border-bottom-color: #1E3A5C; }
 
+p.gray-text {
+  color: var(--gray); }
+
 .btn-primary {
   background-color: #e576c6;
   border-color: #e576c6; }
   .btn-primary:hover {
     background-color: #dd4bb4;
     border-color: #e576c6; }
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  border-color: transparent transparent #e576c6; }
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #EDF2F9; }
+  .back-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background: url("/assets/img/cf/icons/arrow-left.svg") center center/contain no-repeat; }
 
 .cf-signin__image {
   min-height: 500px;
