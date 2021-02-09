@@ -71,28 +71,9 @@
                 </h1>
 
               </div>
-              <div class="col-12 col-md-auto mt-3 mt-md-0">
-
-                <!-- Avatar group -->
-                <div class="avatar-group">
-                  <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Dianna Smiley">
-                    <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                  </a>
-                  <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Ab Hadley">
-                    <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                  </a>
-                  <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Adolfo Hess">
-                    <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
-                  </a>
-                  <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Daniela Dewitt">
-                    <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
-                  </a>
-                </div>
-
-                <!-- Button -->
-                <a href="#modalMembers" class="btn btn-lg btn-rounded-circle btn-white lift" data-toggle="modal">
-                  +
-                </a>
+              <div class="col-12 col-md-auto mt-3 mt-md-0 active-toggle">
+                <span class="active-toggle__label">Active Listing</span>
+                <input class="active-toggle__input" type="checkbox">
 
               </div>
             </div> <!-- / .row -->
@@ -159,12 +140,26 @@
           <div class="col-12 col-xl-8">
             <!-- Card -->
             <div class="card">
-              <div class="card-body text-center vdp-preview-card">
+              <div class="card-body vdp-preview-card">
 
-                <div class="heading">
-                  <h1 class="heading__headline">2019 BMW M4 Competion - CS Limitado</h1>
-                  <h2 class="heading__price">$62,500</h2>
+              <div class="card__header">
+                <div class="card__header-text">
+                  <h2>Listing Preview</h2>
+                </div>
+                <div class="card__header-toggle">
+                  <label class="card__header-toggle-item">
+                    <input type="checkbox">
+                    <span data-unchecked="Espanol" data-checked="English"></span>
+                    <div class="card__header-toggle-label">Espanol</div>
+                    <div class="card__header-toggle-label">English</div>
+                  </label>
+                </div>
               </div>
+
+              <div class="heading">
+                    <h1 class="heading__headline">2019 BMW M4 Competion - CS Limitado</h1>
+                    <h2 class="heading__price">$62,500</h2>
+                </div>
               
               <div class="vdp-top">
               
@@ -525,6 +520,46 @@
               </div>
             </div>
 
+          </div>
+
+          <div class="col-12 col-xl-4">
+            <div class="card">
+              <div class="card-body">
+
+                <div class="card__header">
+                  <div class="card__header-text">
+                    <h2>Card Preview</h2>
+                  </div>
+                  <div class="card__header-toggle">
+                    <label class="card__header-toggle-item">
+                      <input type="checkbox">
+                      <span data-unchecked="Espanol" data-checked="English"></span>
+                      <div class="card__header-toggle-label">Espanol</div>
+                      <div class="card__header-toggle-label">English</div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="vehicle-card">
+                <div class="vehicle-card__card-image-container">
+                  <div class="vehicle-card__card-image" style="background: url('/assets/img/cf/inventory-edit/car1.png') center center/cover no-repeat"></div>
+                </div>
+                  <div class="vehicle-card__flag vehicle-card__flag--new-inventory" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Nuevo Invo</div>
+                  <div class="vehicle-card__card-text">
+                      <h3 class="vehicle-card__headline">2019 BMW M4 Competition</h3>
+                      <div class="vehicle-card__features">
+                          <div class="vehicle-card__feature vehicle-card__feature--price">
+                              $62,500
+                          </div>
+                          <div class="vehicle-card__feature vehicle-card__feature--mileage">
+                              48,245
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              </div>
+            </div>
           </div>
         </div> <!-- / .row -->
       </div>

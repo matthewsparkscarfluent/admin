@@ -11443,6 +11443,13 @@ a:focus, button:focus {
 p.gray-text {
   color: var(--gray); }
 
+.popover {
+  background-color: #11263b;
+  color: #fff; }
+
+.bs-popover-top > .arrow::after, .bs-popover-auto[x-placement^="top"] > .arrow::after, .bs-popover-auto[x-placement^="top"] > .arrow::after {
+  border-top-color: #11263b; }
+
 .btn-primary {
   background-color: #e576c6;
   border-color: #e576c6; }
@@ -11496,6 +11503,137 @@ p.gray-text {
 .cf-inventory-list .item-wrapper .item-title {
   padding-left: 16px; }
 
+.cf-inventory-edit .active-toggle {
+  display: flex;
+  align-items: center; }
+  .cf-inventory-edit .active-toggle span {
+    padding-right: 20px; }
+
+.cf-inventory-edit input[type="checkbox"].active-toggle__input {
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 50px;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 3em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s ease-in-out;
+  border: solid 1px #f0f0f0 !important;
+  order: 3; }
+
+.cf-inventory-edit input[type="checkbox"].active-toggle__input:checked {
+  background: #009f16; }
+
+.cf-inventory-edit input[type="checkbox"].active-toggle__input:after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
+  transform: scale(0.7) translateY(-52%);
+  top: 38%;
+  left: 0;
+  transition: all .2s ease-in-out; }
+
+.cf-inventory-edit input[type="checkbox"].active-toggle__input:checked:after {
+  left: calc(100% - 1.4rem); }
+
+.cf-inventory-edit .card__header {
+  grid-column: auto / span 24;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  width: 100%;
+  padding: 0 0 20px;
+  /* Default unchecked state */
+  /* Checked state */ }
+  .cf-inventory-edit .card__header-text {
+    grid-column: auto / span 12;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    .cf-inventory-edit .card__header-text h2 {
+      margin: 0; }
+  .cf-inventory-edit .card__header-toggle {
+    grid-column: auto / span 12;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+  .cf-inventory-edit .card__header-toggle-item {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #f0f0f0;
+    border: solid 1px #d7d7d7;
+    cursor: pointer;
+    margin: 0 auto; }
+    @media (min-width: 569px) {
+      .cf-inventory-edit .card__header-toggle-item {
+        width: 150px;
+        margin: 0;
+        border-radius: 10px; } }
+  .cf-inventory-edit .card__header-toggle-item input {
+    position: absolute;
+    visibility: hidden; }
+  .cf-inventory-edit .card__header-toggle-item span {
+    position: relative;
+    left: 0%;
+    display: flex;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+    font-weight: 700;
+    font-size: .5rem;
+    letter-spacing: 1px;
+    transition: left 200ms ease-out; }
+    @media (min-width: 569px) {
+      .cf-inventory-edit .card__header-toggle-item span {
+        font-size: .6rem; } }
+  .cf-inventory-edit .card__header-toggle-item :checked + span {
+    left: 50%; }
+  .cf-inventory-edit .card__header-toggle-item span:before {
+    content: attr(data-unchecked);
+    display: block;
+    width: 50%;
+    background-color: #2c74d8;
+    padding: 10px;
+    color: #fff; }
+  .cf-inventory-edit .card__header-toggle-item :checked + span:before {
+    content: attr(data-checked);
+    background-color: #2c74d8; }
+  .cf-inventory-edit .card__header-toggle-label {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    transition: opacity 100ms;
+    opacity: 1;
+    color: #000;
+    font-weight: 700;
+    font-size: .5rem;
+    letter-spacing: 1px; }
+    .cf-inventory-edit .card__header-toggle-label:last-of-type {
+      left: auto;
+      right: 0; }
+    @media (min-width: 569px) {
+      .cf-inventory-edit .card__header-toggle-label {
+        font-size: .6rem; } }
+  .cf-inventory-edit .card__header-toggle-item :checked + .card__header-toggle-label {
+    opacity: 0; }
+
 .cf-inventory-edit .section-label {
   text-transform: uppercase;
   font-size: .8rem;
@@ -11508,7 +11646,9 @@ p.gray-text {
   grid-template-columns: repeat(24, 1fr);
   grid-row-gap: 10px;
   grid-column-gap: 10px;
-  grid-row-gap: 0; }
+  grid-row-gap: 0;
+  max-height: 700px;
+  overflow-y: scroll; }
 
 .cf-inventory-edit .heading {
   grid-column: auto / span 24;
@@ -11634,7 +11774,7 @@ p.gray-text {
     width: 24px;
     height: 24px; }
     .cf-inventory-edit .vdp-highlights__icon .st0 {
-      fill: #f0f0f0; }
+      fill: #d4dde4; }
   .cf-inventory-edit .vdp-highlights__color {
     display: block;
     width: 24px;
@@ -11823,6 +11963,98 @@ p.gray-text {
   .cf-inventory-edit .vdp-description p {
     text-align: left;
     padding: 20px 0; }
+
+.vehicle-card {
+  grid-column: auto / span 24;
+  border: solid 1px #b9d1df;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 100%;
+  position: relative; }
+  @media (min-width: 569px) {
+    .vehicle-card {
+      grid-column: auto / span 12;
+      margin: 0; } }
+  @media (min-width: 1025px) {
+    .vehicle-card {
+      grid-column: auto / span 6; } }
+  .vehicle-card__flag {
+    padding: 5px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-size: .8rem;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    min-width: 100px; }
+    .vehicle-card__flag--new-inventory {
+      background: #009f16; }
+    .vehicle-card__flag--low-mileage {
+      background: #4d4d4d; }
+  .vehicle-card__card-image-container {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden; }
+  .vehicle-card__card-image {
+    height: 0;
+    padding-top: 56.25%; }
+  .vehicle-card__card-text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; }
+    @media (min-width: 991px) {
+      .vehicle-card__card-text {
+        padding: 20px; } }
+  .vehicle-card__headline {
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+    font-size: 1rem; }
+  .vehicle-card__features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0; }
+  .vehicle-card__feature {
+    padding: 0 20px 0 0;
+    margin: 0 0 10px;
+    font-size: .9rem; }
+    .vehicle-card__feature--price {
+      position: relative; }
+      @media (min-width: 1241px) {
+        .vehicle-card__feature--price::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: auto;
+          right: 10px;
+          bottom: 0;
+          width: 1px;
+          background: #000; } }
+    .vehicle-card__feature--mileage {
+      position: relative;
+      padding: 0 20px; }
+      .vehicle-card__feature--mileage::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        background: url("/assets/img/cf/icons/miles.svg"); }
+  .vehicle-card__cta {
+    margin: auto 0 0; }
+    .vehicle-card__cta .btn {
+      min-width: 100%; }
 
 /*! Flickity v2.2.1
 https://flickity.metafizzy.co

@@ -8,6 +8,19 @@ p.gray-text {
     color: var(--gray);
 }
 
+// Popover
+
+.popover {
+    background-color: #11263b;
+    color: $color-2;
+}
+
+.bs-popover-top > .arrow::after, .bs-popover-auto[x-placement^="top"] > .arrow::after {
+    border-top-color: #11263b;
+}
+
+// Button Styles
+
 
 .btn-primary {
     background-color: $color-4;
@@ -92,6 +105,172 @@ p.gray-text {
 
 // Inventory Edit Page 
 
+.active-toggle {
+    display: flex;
+    align-items: center;
+
+    span {
+        padding-right: 20px;
+    }
+}
+
+input[type="checkbox"].active-toggle__input{
+    font-size: 16px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 50px;
+    padding: 10px;
+    background: $color-7;
+    border-radius: 3em;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s ease-in-out;
+    border: solid 1px $color-7 !important;
+    order: 3;
+  }
+  
+  input[type="checkbox"].active-toggle__input:checked{
+    background: $color-10;
+  }
+  
+  input[type="checkbox"].active-toggle__input:after{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 .25em rgba(0,0,0,.3);
+    transform: scale(.7) translateY(-52%);
+    top: 38%;
+    left: 0;
+    transition: all .2s ease-in-out;
+  }
+  
+  input[type="checkbox"].active-toggle__input:checked:after{
+    left: calc(100% - 1.4rem);
+  }
+
+
+.card__header {
+    grid-column: auto / span 24;
+    @include grid;
+    width: 100%;
+    padding: 0 0 20px;
+
+    &-text {
+        grid-column: auto / span 12;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    &-toggle {
+        grid-column: auto / span 12;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &-toggle-item {
+        overflow: hidden;
+        position: relative;
+        display: block;
+        width: 100%;
+        background-color: $color-7;
+        border: solid 1px darken($color-7, 10%);
+        cursor: pointer;
+        margin: 0 auto;
+        
+        @include phone-wide-min {
+            width: 150px;
+            margin: 0;
+            border-radius: 10px;
+        }
+    }
+    &-toggle-item input {
+        position: absolute;
+        visibility: hidden;
+    }
+    &-toggle-item span {
+        position: relative;
+        left: 0%;
+        display: flex;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 2;
+        font-weight: 700;
+        font-size: .5rem;
+        letter-spacing: 1px;
+        -webkit-transition: left 200ms ease-out;
+            -moz-transition: left 200ms ease-out;
+            -o-transition: left 200ms ease-out;
+                transition: left 200ms ease-out;
+
+        @include phone-wide-min {
+            font-size: .6rem;
+        }
+    }
+    &-toggle-item :checked + span {
+        left: 50%;
+        }
+
+    /* Default unchecked state */
+    &-toggle-item span:before {
+        content: attr(data-unchecked);
+        display: block;
+        width: 50%;
+        background-color: $color-8;
+        padding: 10px;
+        color: #fff;
+    }
+
+    /* Checked state */
+    &-toggle-item :checked + span:before {
+        content: attr(data-checked);
+        background-color: $color-8;
+    }
+
+    &-toggle-label {
+        position: absolute;
+        width: 50%;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-transform: uppercase;
+        text-align: center;
+        background: transparent;
+        color: $color-2;
+        transition: opacity 100ms;
+        opacity: 1;
+        color: $color-1; 
+        font-weight: 700;
+        font-size: .5rem;
+        letter-spacing: 1px;
+
+        &:last-of-type {
+            left: auto;
+            right: 0;
+            
+        }
+
+        @include phone-wide-min {
+            font-size: .6rem;
+        }
+    }
+
+    &-toggle-item :checked + .card__header-toggle-label  {         
+        opacity: 0; 
+               
+    }
+}
+
 .section-label {
     text-transform: uppercase;
     font-size: .8rem;
@@ -103,6 +282,8 @@ p.gray-text {
     .vdp-preview-card {
         @include grid;
         grid-row-gap: 0;
+        max-height: 700px;
+        overflow-y: scroll;
     }
 
     .heading {
@@ -278,7 +459,7 @@ p.gray-text {
     
     
             .st0 {
-                fill: $color-7;
+                fill: $color-9;
             }
         }
     
@@ -540,3 +721,132 @@ p.gray-text {
 
 }
 
+// Vehicle Listing Card
+
+.vehicle-card {
+    grid-column: auto / span 24;
+    border: solid 1px darken($color-5, 10%);
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 100%;
+    position: relative;
+
+    @include phone-wide-min {
+        grid-column: auto / span 12;
+        margin: 0;
+    }
+
+    @include desktop-sm-min {
+        grid-column: auto / span 6;
+    }
+
+&__flag {
+    padding: 5px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-2;
+    font-size: .8rem;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    min-width: 100px;
+
+    &--new-inventory {
+        background: $color-10;
+    }
+
+    &--low-mileage {
+        background: lighten($color-1, 30%);
+    }
+}
+
+&__card-image-container {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+
+&__card-image {
+    height: 0;
+    padding-top: 56.25%;
+}
+
+&__card-text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    @include tablet-wide-min {
+        padding: 20px;
+    }
+}
+
+&__headline {
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+    font-size: 1rem;
+}
+
+&__features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+&__feature {
+    padding: 0 20px 0 0;
+    margin: 0 0 10px;
+    font-size: .9rem;
+
+    &--price {
+        position: relative;
+        
+        @include desktop-min {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: auto;
+                right: 10px;
+                bottom: 0;
+                width: 1px;
+                background: $color-1;
+            }
+        }
+    }
+
+    &--mileage {
+        position: relative;
+        padding: 0 20px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background: url('/assets/img/cf/icons/miles.svg');
+        }
+    }
+}
+
+&__cta {
+    margin: auto 0 0;
+
+    .btn {
+        min-width: 100%;
+    }
+}
+
+}
