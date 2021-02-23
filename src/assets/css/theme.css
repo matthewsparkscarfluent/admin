@@ -11503,13 +11503,13 @@ p.gray-text {
 .cf-inventory-list .item-wrapper .item-title {
   padding-left: 16px; }
 
-.cf-inventory-edit .active-toggle {
+.active-toggle {
   display: flex;
   align-items: center; }
-  .cf-inventory-edit .active-toggle span {
+  .active-toggle span {
     padding-right: 20px; }
 
-.cf-inventory-edit input[type="checkbox"].active-toggle__input {
+input[type="checkbox"].active-toggle__input {
   font-size: 16px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -11525,10 +11525,10 @@ p.gray-text {
   border: solid 1px #f0f0f0 !important;
   order: 3; }
 
-.cf-inventory-edit input[type="checkbox"].active-toggle__input:checked {
+input[type="checkbox"].active-toggle__input:checked {
   background: #009f16; }
 
-.cf-inventory-edit input[type="checkbox"].active-toggle__input:after {
+input[type="checkbox"].active-toggle__input:after {
   position: absolute;
   content: "";
   width: 20px;
@@ -11541,7 +11541,7 @@ p.gray-text {
   left: 0;
   transition: all .2s ease-in-out; }
 
-.cf-inventory-edit input[type="checkbox"].active-toggle__input:checked:after {
+input[type="checkbox"].active-toggle__input:checked:after {
   left: calc(100% - 1.4rem); }
 
 .cf-inventory-edit .card__header {
@@ -11577,7 +11577,7 @@ p.gray-text {
     margin: 0 auto; }
     @media (min-width: 569px) {
       .cf-inventory-edit .card__header-toggle-item {
-        width: 150px;
+        width: 80px;
         margin: 0;
         border-radius: 10px; } }
   .cf-inventory-edit .card__header-toggle-item input {
@@ -12055,6 +12055,78 @@ p.gray-text {
     margin: auto 0 0; }
     .vehicle-card__cta .btn {
       min-width: 100%; }
+
+.cf-inventory-heading .input-group-append .input-action__heading-title {
+  position: relative; }
+  .cf-inventory-heading .input-group-append .input-action__heading-title::after {
+    content: 'Edit';
+    border: solid 1px var(--gray);
+    padding: 2px 8px;
+    font-size: .9rem;
+    font-weight: 700;
+    border-radius: 3px; }
+
+.cf-inventory-heading .input-group-append .input-action__odometer {
+  position: relative; }
+  .cf-inventory-heading .input-group-append .input-action__odometer::after {
+    content: 'Edit';
+    border: solid 1px var(--gray);
+    padding: 2px 8px;
+    font-size: .9rem;
+    font-weight: 700;
+    border-radius: 3px; }
+
+.cf-inventory-heading .input-group.input-group-merge > .form-control:focus {
+  border-color: #D2DDEC; }
+
+.cf-inventory-heading .input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text {
+  border-color: #D2DDEC; }
+
+.cf-inventory-heading .input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text .input-action__heading-title::after {
+  content: 'Enter';
+  color: #e576c6;
+  border-color: #e576c6; }
+
+.cf-inventory-heading .input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text .input-action__odometer::after {
+  content: 'Enter';
+  color: #e576c6;
+  border-color: #e576c6; }
+
+.cf-inventory-heading .main-info__image {
+  padding: 40px; }
+  .cf-inventory-heading .main-info__image img {
+    max-width: 100%;
+    height: auto; }
+
+.cf-inventory-heading .main-info__feature {
+  padding: 10px 0; }
+
+.cf-inventory-heading .main-info__feature-icon-wrapper {
+  padding: 0 20px; }
+
+.cf-inventory-heading .main-info__feature-icon {
+  width: 32px;
+  height: auto; }
+  .cf-inventory-heading .main-info__feature-icon .st0 {
+    fill: #d4dde4; }
+
+.cf-inventory-heading .main-info__icon-color {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px; }
+  @media (min-width: 991px) {
+    .cf-inventory-heading .main-info__icon-color {
+      width: 28px;
+      height: 28px; } }
+
+.cf-inventory-heading .main-info__feature-text {
+  padding: 0 20px; }
+  .cf-inventory-heading .main-info__feature-text p {
+    margin: 0; }
+
+.cf-inventory-heading .main-info__feature-input {
+  margin-left: auto; }
 
 /*! Flickity v2.2.1
 https://flickity.metafizzy.co

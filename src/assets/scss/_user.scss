@@ -101,9 +101,7 @@ p.gray-text {
     }
 }
 
-.cf-inventory-edit {
-
-// Inventory Edit Page 
+// Active Toggle
 
 .active-toggle {
     display: flex;
@@ -153,6 +151,9 @@ input[type="checkbox"].active-toggle__input{
     left: calc(100% - 1.4rem);
   }
 
+  // Inventory Edit Page 
+
+.cf-inventory-edit {
 
 .card__header {
     grid-column: auto / span 24;
@@ -189,7 +190,7 @@ input[type="checkbox"].active-toggle__input{
         margin: 0 auto;
         
         @include phone-wide-min {
-            width: 150px;
+            width: 80px;
             margin: 0;
             border-radius: 10px;
         }
@@ -848,5 +849,114 @@ input[type="checkbox"].active-toggle__input{
         min-width: 100%;
     }
 }
+
+}
+
+// Heading Edit
+
+.cf-inventory-heading {
+    
+    .input-group-append {
+
+        .input-action__heading-title {
+            position: relative;
+    
+            &::after {
+                content: 'Edit';
+                border: solid 1px var(--gray);
+                padding: 2px 8px;
+                font-size: .9rem;
+                font-weight: 700;
+                border-radius: 3px;
+            }
+        }
+        
+        .input-action__odometer {
+            position: relative;
+    
+            &::after {
+                content: 'Edit';
+                border: solid 1px var(--gray);
+                padding: 2px 8px;
+                font-size: .9rem;
+                font-weight: 700;
+                border-radius: 3px;
+            }
+        }
+    }
+    
+    .input-group.input-group-merge > .form-control:focus {
+        border-color: #D2DDEC;
+    }
+    
+    .input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text {
+        border-color: #D2DDEC;
+    }
+    
+    .input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text .input-action__heading-title::after {
+        content: 'Enter';
+        color: $color-4;
+        border-color: $color-4;
+    }
+
+    .input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text .input-action__odometer::after {
+        content: 'Enter';
+        color: $color-4;
+        border-color: $color-4;
+    }
+
+    .main-info {
+        
+
+        &__image {
+            padding: 40px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        &__feature {
+            padding: 10px 0;
+        }
+
+        &__feature-icon-wrapper {
+            padding: 0 20px;
+        }
+        
+        &__feature-icon {
+            width: 32px;
+            height: auto;
+
+            .st0 {
+                fill: $color-9;
+            }
+        }
+
+        &__icon-color {
+            display: block;
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+    
+            @include tablet-wide-min {
+                width: 28px;
+                height: 28px; 
+            }
+        }
+
+        &__feature-text {
+            padding: 0 20px;
+
+            p {
+                margin: 0;
+            }
+        }
+        
+        &__feature-input {
+            margin-left: auto;
+        }
+    }
 
 }
