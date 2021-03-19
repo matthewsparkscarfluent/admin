@@ -18,6 +18,8 @@ $color-8: #2c74d8;
 $color-9: #d4dde4;
 $color-10: #009f16;
 
+$body-bg: #F9FBFD;
+
 @mixin grid {
 	display: grid;
 	grid-template-columns: repeat(24, 1fr);

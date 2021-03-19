@@ -82,3 +82,20 @@
   }
 
 })();
+
+//  Photos
+
+var containers = document.querySelectorAll('.photo-upload');
+
+var draggable = new window.Draggable.Sortable(containers, {
+  draggable: '.drag-item',
+  appendTo: '.photo-upload',
+  handle: '.photo-upload__control--drag',
+  classes: {
+    body: 'draggable-container--is-dragging',
+  },
+});
+
+draggable.on('sortable:sorted', function() {
+  console.log('sorted!');
+});

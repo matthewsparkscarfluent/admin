@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-reports.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-reports.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-reports.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content cf-inventory-photos">
+
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("partials/topbar.html")
+      }
+
+      <!-- HEADER -->
+      <div class="header">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+
+          <!-- Body -->
+          <div class="header-body">
+            <div class="row align-items-center">
+              <div class="col-auto">
+
+                <!-- Avatar -->
+                <a href="/inventory-list-cf.html" class="back-button"></a>
+
+              </div>
+              <div class="col ml-n3 ml-md-n2">
+
+                <!-- Pretitle -->
+                <h6 class="header-pretitle">
+                  Inventory
+                </h6>
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  2019 BMW M4 Competition
+                </h1>
+
+              </div>
+              <div class="col-12 col-md-auto mt-3 mt-md-0 active-toggle">
+                <span class="active-toggle__label">Active Listing</span>
+                <input class="active-toggle__input" type="checkbox">
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row align-items-center">
+              <div class="col">
+
+                <!-- Nav -->
+                <ul class="nav nav-tabs nav-overflow header-tabs">
+                  <li class="nav-item">
+                    <a href="/inventory-edit-cf.html" class="nav-link">
+                      Preview
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/inventory-heading-cf.html" class="nav-link">
+                      Heading
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/inventory-photos-cf.html" class="nav-link active">
+                      Photos
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link">
+                      Pricing
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link">
+                      Call To Action
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link">
+                      Features
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link">
+                      Description
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link">
+                      Card Callout
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- / .header -->
+
+      <!-- CONTENT -->
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row inventory-photos-cf-header">
+          <div class="col-12 col-xl-6">
+            <h2 class="">
+              Rearrange, add, or remove photos
+            </h2>
+            <p class="gray-text">Drag and drop your photos in the order you'd like.  Your 1 position photo will be your main image. Your 1,2 and 3 position photos will be used in the listing card's view.</p>
+          </div>
+          <div class="col-12 col-xl-6 d-flex justify-content-center justify-content-xl-end align-items-center">
+              <a href="#" class="btn btn-secondary"><i class="fe fe-download"></i> Upload Photos</a>
+              <a href="#" class="btn btn-primary">Save Changes</a>
+          </div>
+
+        </div>
+
+        <div class="row photo-upload__container">
+            <div class="col-12">
+                
+                <!-- Dropzone -->
+              <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-options='{"url": "https://", "thumbnailWidth": "300", "thumbnailHeight": "169"}'>
+
+                <!-- Fallback -->
+                <div class="fallback">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFileUploadMultiple" multiple>
+                    <label class="custom-file-label" for="customFileUploadMultiple">Choose file</label>
+                  </div>
+                </div>
+
+                <!-- Preview -->
+                <div class="dz-preview photo-upload rounded">
+                  <div class="list-group-item photo-upload__item drag-item">
+                    <div class="flex-column align-items-center">
+                      <div class="col-auto photo-upload__card">
+
+                        <!-- Control Bar -->
+                        <div class="photo-upload__controls d-flex align-items-center">
+                          <div class="photo-upload__control photo-upload__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+
+                          <select class="custom-select custom-select-sm" data-toggle="select">
+                            <option>Move</option>
+                            <option>Option</option>
+                            <option>Option</option>
+                          </select>
+
+                          <button class="btn btn-white btn-sm">
+                            Edit
+                          </button>
+
+                          <button class="btn btn-white btn-sm" data-dz-remove>
+                            <i class="fe fe-trash"></i>
+                          </button>
+
+                        </div>
+
+                        <!-- Image -->
+                        <div class="photo-upload__photo">
+                          <img src="data:image/svg+xml,%3csvg3c/svg%3e" alt="..." data-dz-thumbnail>
+                          <span id="photo-count"></span>
+                        </div>
+
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+        </div>
+
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

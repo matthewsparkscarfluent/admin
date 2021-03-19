@@ -32,6 +32,17 @@ p.gray-text {
     }
 }
 
+.btn-secondary {
+    background-color: $color-2;
+    border-color: $color-4;
+    color: $color-4;
+
+    &:hover {
+        background-color: darken($color-4, 10%);
+        border-color: $color-4;
+    }
+}
+
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     border-color: transparent transparent $color-4;
 }
@@ -959,4 +970,128 @@ input[type="checkbox"].active-toggle__input{
         }
     }
 
+}
+
+// Photos Page
+
+.inventory-photos-cf-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #F9FBFD;
+    padding: 20px 0;
+
+    .btn {
+        margin: 0 5px;
+    }
+}
+
+.photo-upload {
+    @include grid;
+    padding: 20px 0 0;
+    counter-reset: photo-count;
+
+    &__container {
+        padding: 20px 10px;
+        border-radius: 10px;
+        background: darken($body-bg, 2%);
+        border: solid 2px darken($body-bg, 5%);
+    }
+
+    &__item {
+        grid-column: auto / span 24;
+        padding: 0;
+        border-radius: 10px !important;
+        overflow: hidden;
+
+        @include phone-wide-min {
+            grid-column: auto / span 12;
+        }
+
+        @include tablet-wide-min {
+            grid-column: auto / span 6;
+        }
+    }
+
+    &__card {
+        padding: 0;
+    }
+
+    &__controls {
+        background: $color-2;
+        padding: 10px;
+
+        .btn {
+            margin: 0 0 0 5px;
+        }
+
+        select {
+            width: auto;
+            margin-left: auto;
+        }
+    }
+
+    &__control {
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .st0 {
+            fill: var(--gray);
+        }
+
+        &--btn {
+            border: solid 1px var(--gray);
+            padding: 2px 8px;
+            font-size: .9rem;
+            font-weight: 700;
+            border-radius: 3px;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    &__photo {
+        position: relative;
+
+        img {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+        }
+
+        #photo-count {
+            background: $color-2;
+            padding: 10px;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            
+
+            &::after {
+                content: counter(photo-count);
+                counter-increment: photo-count;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    .draggable--original {
+
+        #photo-count {
+            display: none;
+        }
+
+    }
 }

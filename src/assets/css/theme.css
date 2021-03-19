@@ -11457,6 +11457,14 @@ p.gray-text {
     background-color: #dd4bb4;
     border-color: #e576c6; }
 
+.btn-secondary {
+  background-color: #fff;
+  border-color: #e576c6;
+  color: #e576c6; }
+  .btn-secondary:hover {
+    background-color: #dd4bb4;
+    border-color: #e576c6; }
+
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   border-color: transparent transparent #e576c6; }
@@ -12127,6 +12135,88 @@ input[type="checkbox"].active-toggle__input:checked:after {
 
 .cf-inventory-heading .main-info__feature-input {
   margin-left: auto; }
+
+.inventory-photos-cf-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: #F9FBFD;
+  padding: 20px 0; }
+  .inventory-photos-cf-header .btn {
+    margin: 0 5px; }
+
+.photo-upload {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  padding: 20px 0 0;
+  counter-reset: photo-count; }
+  .photo-upload__container {
+    padding: 20px 10px;
+    border-radius: 10px;
+    background: #f1f6fa;
+    border: solid 2px #e6eef7; }
+  .photo-upload__item {
+    grid-column: auto / span 24;
+    padding: 0;
+    border-radius: 10px !important;
+    overflow: hidden; }
+    @media (min-width: 569px) {
+      .photo-upload__item {
+        grid-column: auto / span 12; } }
+    @media (min-width: 991px) {
+      .photo-upload__item {
+        grid-column: auto / span 6; } }
+  .photo-upload__card {
+    padding: 0; }
+  .photo-upload__controls {
+    background: #fff;
+    padding: 10px; }
+    .photo-upload__controls .btn {
+      margin: 0 0 0 5px; }
+    .photo-upload__controls select {
+      width: auto;
+      margin-left: auto; }
+  .photo-upload__control svg {
+    width: 24px;
+    height: 24px; }
+  .photo-upload__control .st0 {
+    fill: var(--gray); }
+  .photo-upload__control--btn {
+    border: solid 1px var(--gray);
+    padding: 2px 8px;
+    font-size: .9rem;
+    font-weight: 700;
+    border-radius: 3px; }
+    .photo-upload__control--btn svg {
+      width: 16px;
+      height: 16px; }
+  .photo-upload__photo {
+    position: relative; }
+    .photo-upload__photo img {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important; }
+    .photo-upload__photo #photo-count {
+      background: #fff;
+      padding: 10px;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      bottom: 20px;
+      left: 20px; }
+      .photo-upload__photo #photo-count::after {
+        content: counter(photo-count);
+        counter-increment: photo-count;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+  .photo-upload .draggable--original #photo-count {
+    display: none; }
 
 /*! Flickity v2.2.1
 https://flickity.metafizzy.co
