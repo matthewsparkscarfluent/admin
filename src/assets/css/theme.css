@@ -12218,6 +12218,55 @@ input[type="checkbox"].active-toggle__input:checked:after {
   .photo-upload .draggable--original #photo-count {
     display: none; }
 
+.inventory-features-cf-header {
+  margin-bottom: 20px; }
+
+.vehicle-features__items {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  position: relative;
+  padding: 20px; }
+  .vehicle-features__items--featured {
+    border: solid 2px #d3e2f0; }
+
+.vehicle-features__item {
+  grid-column: auto / span 12;
+  background: #fff;
+  border-radius: 10px;
+  border: solid 2px #F9FBFD;
+  padding: 10px;
+  display: flex;
+  align-items: center; }
+  @media (min-width: 768px) {
+    .vehicle-features__item {
+      grid-column: auto / span 8; } }
+  @media (min-width: 991px) {
+    .vehicle-features__item {
+      grid-column: auto / span 6; } }
+
+.vehicle-features__card {
+  width: 100%;
+  display: flex;
+  align-items: center; }
+
+.vehicle-features__feature-label {
+  flex: 0 0 70%;
+  order: 2;
+  margin-left: auto; }
+  .vehicle-features__feature-label h4 {
+    margin: 0; }
+
+.vehicle-features__controls {
+  flex: 0 0 auto;
+  order: 1; }
+  .vehicle-features__controls svg {
+    width: 24px;
+    height: 24px; }
+  .vehicle-features__controls .st0 {
+    fill: var(--gray); }
+
 /*! Flickity v2.2.1
 https://flickity.metafizzy.co
 ---------------------------------------------- */

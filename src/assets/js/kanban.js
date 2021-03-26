@@ -99,3 +99,23 @@ var draggable = new window.Draggable.Sortable(containers, {
 draggable.on('sortable:sorted', function() {
   console.log('sorted!');
 });
+
+//  Features
+
+var containers = document.querySelectorAll('.vehicle-features__items');
+
+var draggable = new window.Draggable.Swappable(containers, {
+  draggable: '.drag-item',
+  appendTo: '.vehicle-features__items',
+  // handle: '.vehicle-features__feature-handle',
+  classes: {
+    body: 'draggable-container--is-dragging',
+  },
+  mirror: {
+    constrainDimensions: true,
+  },
+});
+
+draggable.on('sortable:sorted', function() {
+  console.log('sorted!');
+});

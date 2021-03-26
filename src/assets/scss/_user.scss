@@ -1095,3 +1095,81 @@ input[type="checkbox"].active-toggle__input{
 
     }
 }
+
+// Features
+
+.inventory-features-cf-header {
+    margin-bottom: 20px;
+}
+
+.vehicle-features {
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 10px;
+        position: relative;
+        padding: 20px;
+
+        &--featured {
+            border: solid 2px darken($body-bg, 10%);
+        }
+    }
+
+    &__item {
+        grid-column: auto / span 12;
+        background: $color-2;
+        border-radius: 10px;
+        border: solid 2px $body-bg;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+        @include tablet-min {
+            grid-column: auto / span 8;
+        }
+
+        @include tablet-wide-min {
+            grid-column: auto / span 6;
+        }
+
+        
+    }
+
+    &__card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__feature-label {
+        flex: 0 0 70%;
+        order: 2;
+        margin-left: auto;
+
+        h4 {
+            margin: 0;
+        }
+
+    }
+
+    &__controls {
+        flex: 0 0 auto;
+        
+        order: 1;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .st0 {
+            fill: var(--gray);
+        }
+
+    }
+
+    
+}
+

@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-reports.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-reports.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-reports.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content cf-inventory-photos">
+
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("partials/topbar.html")
+      }
+
+      <!-- HEADER -->
+      <div class="header">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+
+          <!-- Body -->
+          <div class="header-body">
+            <div class="row align-items-center">
+              <div class="col-auto">
+
+                <!-- Avatar -->
+                <a href="/inventory-list-cf.html" class="back-button"></a>
+
+              </div>
+              <div class="col ml-n3 ml-md-n2">
+
+                <!-- Pretitle -->
+                <h6 class="header-pretitle">
+                  Inventory
+                </h6>
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  2019 BMW M4 Competition
+                </h1>
+
+              </div>
+              <div class="col-12 col-md-auto mt-3 mt-md-0 active-toggle">
+                <span class="active-toggle__label">Active Listing</span>
+                <input class="active-toggle__input" type="checkbox">
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row align-items-center">
+              <div class="col">
+
+                <!-- Nav -->
+                <ul class="nav nav-tabs nav-overflow header-tabs">
+                  <li class="nav-item">
+                    <a href="/inventory-edit-cf.html" class="nav-link">
+                      Preview
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/inventory-heading-cf.html" class="nav-link">
+                      Heading
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/inventory-photos-cf.html" class="nav-link">
+                      Photos
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link">
+                      Pricing
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link">
+                      Call To Action
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/inventory-features-cf.html" class="nav-link active">
+                      Features
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link">
+                      Description
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link">
+                      Card Callout
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- / .header -->
+
+      <!-- CONTENT -->
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row inventory-features-cf-header">
+          <div class="col-12 col-xl-6">
+            <h2 class="">
+              Vehicle Features
+            </h2>
+            <p class="gray-text">Drag and drop features in the order you'd like.  The top 12 positions will be in the initial view and the other features will be visible in an expandable section.</p>
+          </div>
+          <div class="col-12 col-xl-6 d-flex justify-content-center justify-content-xl-end align-items-center">
+              <a href="#" class="btn btn-primary">Save Changes</a>
+          </div>
+
+        </div>
+
+        <div class="row vehicle-features__container">
+            <div class="col-12">
+
+              <h6 class="text-uppercase text-muted">Visible On Initial Page Load</h6>
+          
+                <div class="vehicle-features__items vehicle-features__items--featured rounded">
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                         <!-- Label -->
+                         <div class="vehicle-features__feature-label">
+                          <h4>Premium Sound System</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div>         
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Heated Leather Seats</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Apple CarPlay</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Blind Spot Protection</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                   
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Remote Start</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Panoramic Moon Roof</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Onboard WiFi</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Premium Alloy Wheels</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                   
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Extended Merino Leather</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Aluminum Tetragon Interior Trim</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                   
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>BMW ConnectedDrive® Services</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Harman Kardon® Surround Sound Audio System</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                  
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                   
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>HD Radio™ with "multicast" FM station reception</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Dynamic Cruise Control</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                  
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Live Cockpit Professional</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                  
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                  
+                    <div class="col-auto vehicle-features__card">
+                      <!-- Label -->
+                      <div class="vehicle-features__feature-label">
+                        <h4>LED Headlights </h4>
+                      </div>
+                      <!-- Control Bar -->
+                      <div class="vehicle-features__controls d-flex align-items-center">              
+                        <div class="vehicle-features__control vehicle-features__control--drag">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                        </div>
+                      </div>
+                    </div> 
+                
+                </div>
+
+                </div>
+
+                <div class="vehicle-features__items rounded">
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                         <!-- Label -->
+                         <div class="vehicle-features__feature-label">
+                          <h4>Premium Sound System</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div>         
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Heated Leather Seats</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Apple CarPlay</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Blind Spot Protection</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                   
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Remote Start</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Panoramic Moon Roof</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Onboard WiFi</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Premium Alloy Wheels</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                    
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                   
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Extended Merino Leather</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Aluminum Tetragon Interior Trim</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                   
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>BMW ConnectedDrive® Services</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Harman Kardon® Surround Sound Audio System</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                  
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                   
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>HD Radio™ with "multicast" FM station reception</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                    
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Dynamic Cruise Control</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                  </div>
+
+                  <div class="vehicle-features__item drag-item">
+                  
+                      <div class="col-auto vehicle-features__card">
+                        <!-- Label -->
+                        <div class="vehicle-features__feature-label">
+                          <h4>Live Cockpit Professional</h4>
+                        </div>
+                        <!-- Control Bar -->
+                        <div class="vehicle-features__controls d-flex align-items-center">              
+                          <div class="vehicle-features__control vehicle-features__control--drag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
+                          </div>
+                        </div>
+                      </div> 
+                  
+                  </div>
+
+                  
+
+                </div>
+
+              
+
+            </div>
+        </div>
+
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>
