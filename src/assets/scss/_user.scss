@@ -69,6 +69,86 @@ p.gray-text {
     }
 }
 
+// Input with Enter
+
+.input-group-append {
+
+    .input-action__heading-title {
+        position: relative;
+
+        &::after {
+            content: 'Edit';
+            border: solid 1px var(--gray);
+            padding: 2px 8px;
+            font-size: .9rem;
+            font-weight: 700;
+            border-radius: 3px;
+        }
+    }
+    
+    .input-action__odometer {
+        position: relative;
+
+        &::after {
+            content: 'Edit';
+            border: solid 1px var(--gray);
+            padding: 2px 8px;
+            font-size: .9rem;
+            font-weight: 700;
+            border-radius: 3px;
+        }
+    }
+
+    .input-group__price {
+        position: relative;
+
+        &::after {
+            content: '$';
+            font-size: 0.9375rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #95AAC9;
+            text-align: center;
+        }
+    }
+}
+
+.input-group.input-group-merge > .form-control:focus {
+    border-color: #D2DDEC;
+}
+
+.input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text {
+    border-color: #D2DDEC;
+}
+
+.input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text .input-action__heading-title::after {
+    content: 'Enter';
+    color: $color-4;
+    border-color: $color-4;
+}
+
+.input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text .input-action__odometer::after {
+    content: 'Enter';
+    color: $color-4;
+    border-color: $color-4;
+}
+
+// $ Placeholder
+
+.input-group__price {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #95AAC9;
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
 // Sign In Page
 
 .cf-signin {
@@ -866,55 +946,6 @@ input[type="checkbox"].active-toggle__input{
 // Heading Edit
 
 .cf-inventory-heading {
-    
-    .input-group-append {
-
-        .input-action__heading-title {
-            position: relative;
-    
-            &::after {
-                content: 'Edit';
-                border: solid 1px var(--gray);
-                padding: 2px 8px;
-                font-size: .9rem;
-                font-weight: 700;
-                border-radius: 3px;
-            }
-        }
-        
-        .input-action__odometer {
-            position: relative;
-    
-            &::after {
-                content: 'Edit';
-                border: solid 1px var(--gray);
-                padding: 2px 8px;
-                font-size: .9rem;
-                font-weight: 700;
-                border-radius: 3px;
-            }
-        }
-    }
-    
-    .input-group.input-group-merge > .form-control:focus {
-        border-color: #D2DDEC;
-    }
-    
-    .input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text {
-        border-color: #D2DDEC;
-    }
-    
-    .input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text .input-action__heading-title::after {
-        content: 'Enter';
-        color: $color-4;
-        border-color: $color-4;
-    }
-
-    .input-group.input-group-merge > .form-control:focus ~ [class*="input-group"] > .input-group-text .input-action__odometer::after {
-        content: 'Enter';
-        color: $color-4;
-        border-color: $color-4;
-    }
 
     .main-info {
         
@@ -1168,6 +1199,221 @@ input[type="checkbox"].active-toggle__input{
             fill: var(--gray);
         }
 
+    }
+
+    
+}
+
+// Pricing 
+
+.vehicle-pricing {
+    
+    &__price {
+        padding: 20px 0 0;
+    }
+
+    &__price-item {
+        padding: 20px 10px;
+
+        .active-toggle {
+            padding: 10px;
+        }
+
+        input {
+            padding-left: 30px;
+            position: relative;
+        }
+    }
+
+    &__incentives {
+        padding: 40px 0;
+
+        &-header {
+           display: flex;
+           flex-wrap: wrap;
+           align-items: center;
+           justify-content: space-between;
+            width: 100%;
+            padding: 0 0 20px;
+        
+            &-text {
+                grid-column: auto / span 12;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+        
+                h2 {
+                    margin: 0;
+                }
+            }
+        
+            &-toggle {
+                grid-column: auto / span 12;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        
+            &-toggle-item {
+                overflow: hidden;
+                position: relative;
+                display: block;
+                width: 100%;
+                background-color: $color-7;
+                border: solid 1px darken($color-7, 10%);
+                cursor: pointer;
+                margin: 0 auto;
+                
+                @include phone-wide-min {
+                    width: 80px;
+                    margin: 0;
+                    border-radius: 10px;
+                }
+            }
+            &-toggle-item input {
+                position: absolute;
+                visibility: hidden;
+            }
+            &-toggle-item span {
+                position: relative;
+                left: 0%;
+                display: flex;
+                text-transform: uppercase;
+                text-align: center;
+                z-index: 2;
+                font-weight: 700;
+                font-size: .5rem;
+                letter-spacing: 1px;
+                -webkit-transition: left 200ms ease-out;
+                    -moz-transition: left 200ms ease-out;
+                    -o-transition: left 200ms ease-out;
+                        transition: left 200ms ease-out;
+        
+                @include phone-wide-min {
+                    font-size: .6rem;
+                }
+            }
+            &-toggle-item :checked + span {
+                left: 50%;
+                }
+        
+            /* Default unchecked state */
+            &-toggle-item span:before {
+                content: attr(data-unchecked);
+                display: block;
+                width: 50%;
+                background-color: $color-8;
+                padding: 10px;
+                color: #fff;
+            }
+        
+            /* Checked state */
+            &-toggle-item :checked + span:before {
+                content: attr(data-checked);
+                background-color: $color-8;
+            }
+        
+            &-toggle-label {
+                position: absolute;
+                width: 50%;
+                top: 0;
+                left: 0;
+                padding: 10px;
+                text-transform: uppercase;
+                text-align: center;
+                background: transparent;
+                color: $color-2;
+                transition: opacity 100ms;
+                opacity: 1;
+                color: $color-1; 
+                font-weight: 700;
+                font-size: .5rem;
+                letter-spacing: 1px;
+        
+                &:last-of-type {
+                    left: auto;
+                    right: 0;
+                    
+                }
+        
+                @include phone-wide-min {
+                    font-size: .6rem;
+                }
+            }
+        
+            &-toggle-item :checked + .card__header-toggle-label  {         
+                opacity: 0; 
+                       
+            }
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 10px;
+        position: relative;
+        padding: 20px;
+
+        &--featured {
+            border: solid 2px darken($body-bg, 10%);
+        }
+    }
+
+    &__item {
+        grid-column: auto / span 24;
+        background: $color-2;
+        border-radius: 10px;
+        border: solid 2px $body-bg;
+        padding: 10px;
+        display: flex;
+        align-items: center;    
+    }
+
+    &__card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__feature-label {
+        flex: 0 0 95%;
+        order: 2;
+        margin-left: auto;
+
+        h4 {
+            padding: 15px 0;
+            margin: 0;
+            border-bottom: 1px solid #E3EBF6;
+        }
+
+        p {
+            padding: 15px 0;
+            margin: 0;
+            font-size: .9rem;
+        }
+
+    }
+
+    &__controls {
+        flex: 0 0 auto;
+        
+        order: 1;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .st0 {
+            fill: var(--gray);
+        }
+
+    }
+
+    .draggable-source--is-dragging {
+        z-index: 100 !important;
     }
 
     

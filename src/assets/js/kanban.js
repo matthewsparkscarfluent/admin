@@ -119,3 +119,23 @@ var draggable = new window.Draggable.Swappable(containers, {
 draggable.on('sortable:sorted', function() {
   console.log('sorted!');
 });
+
+// Pricing
+
+var containers = document.querySelectorAll('.vehicle-pricing__items');
+
+var draggable = new window.Draggable.Swappable(containers, {
+  draggable: '.drag-item',
+  appendTo: '.vehicle-pricing__items',
+  // handle: '.vehicle-features__feature-handle',
+  classes: {
+    body: 'draggable-container--is-dragging',
+  },
+  mirror: {
+    constrainDimensions: true,
+  },
+});
+
+draggable.on('sortable:sorted', function() {
+  console.log('sorted!');
+});
