@@ -1223,6 +1223,15 @@ input[type="checkbox"].active-toggle__input{
             padding-left: 30px;
             position: relative;
         }
+
+        .form-check {
+            margin: 12px 0;
+
+            input {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 
     &__incentives {
@@ -1418,4 +1427,82 @@ input[type="checkbox"].active-toggle__input{
 
     
 }
+
+
+// CTAs
+
+.inventory-cta-cf-header {
+    padding: 0 0 40px;
+}
+
+.cf-inventory-cta {
+    padding: 0 0 60px;
+
+
+    &__card-container {
+        position: relative;
+    }
+
+    &__card-toggle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &__card {
+        padding: 20px;
+        transition: all .3s;
+        position: relative;
+        z-index: 1;
+        
+        &::after {
+            content: 'Selected';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background: $color-4;
+            color: var(--white);
+            opacity: 0;
+            transition: opacity .3s;
+        }
+    }
+
+    &__card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__card-icon {
+        padding: 0 0 20px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__btn {
+        background: var(--blue);
+        color: var(--white);
+        min-width: 100%;
+    }
+}
+
+
+[id='card-toggle']:checked + .card {
+    border-color: $color-4;
+
+    &::after {
+        opacity: 1;
+    }
+}
+
 
