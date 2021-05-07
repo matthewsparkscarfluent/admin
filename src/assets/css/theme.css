@@ -11957,7 +11957,7 @@ input[type="checkbox"].active-toggle__input:checked:after {
 
 .cf-inventory-edit .vdp-features {
   grid-column: auto / span 24;
-  padding: 0 40px 40px; }
+  padding: 40px; }
   .cf-inventory-edit .vdp-features__wrapper {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
@@ -12082,12 +12082,13 @@ input[type="checkbox"].active-toggle__input:checked:after {
         padding: 20px; } }
   .vehicle-card__headline {
     font-weight: 700;
-    text-align: left;
+    text-align: center;
     margin: 0;
     font-size: 1rem; }
   .vehicle-card__features {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 20px 0; }
   .vehicle-card__feature {
