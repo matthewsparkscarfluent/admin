@@ -12498,6 +12498,69 @@ input[type="checkbox"].active-toggle__input:checked:after {
   [id='card-toggle']:checked + .card::after {
     opacity: 1; }
 
+.inventory-callout-cf-header {
+  padding: 0 0 40px; }
+
+.cf-inventory-callout {
+  padding: 0 0 60px; }
+  .cf-inventory-callout__card-container {
+    position: relative; }
+  .cf-inventory-callout__card-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer; }
+  .cf-inventory-callout__card {
+    padding: 20px 10px;
+    transition: all .3s; }
+    .cf-inventory-callout__card::after {
+      content: 'Selected';
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      background: #e576c6;
+      color: var(--white);
+      opacity: 0;
+      transition: opacity .3s; }
+  .cf-inventory-callout__card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+  .cf-inventory-callout__card-btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%; }
+  .cf-inventory-callout__card-btn-wrapper {
+    padding-right: 10px;
+    padding-bottom: 10px; }
+  .cf-inventory-callout__btn {
+    background: var(--green);
+    color: var(--white);
+    min-width: 180px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  .cf-inventory-callout__color-selector {
+    padding: 40px 0 10px;
+    position: relative;
+    z-index: 3; }
+    .cf-inventory-callout__color-selector input {
+      opacity: 0; }
+    .cf-inventory-callout__color-selector a {
+      color: var(--black);
+      text-decoration: underline; }
+
+[id='card-toggle']:checked + .card {
+  border-color: #e576c6; }
+  [id='card-toggle']:checked + .card::after {
+    opacity: 1; }
+
 /*! Flickity v2.2.1
 https://flickity.metafizzy.co
 ---------------------------------------------- */

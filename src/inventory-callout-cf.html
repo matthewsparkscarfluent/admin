@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-reports.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-reports.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-reports.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content cf-inventory-callout">
+
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("partials/topbar.html")
+      }
+
+      <!-- HEADER -->
+      <div class="header">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+
+          <!-- Body -->
+          <div class="header-body">
+            <div class="row align-items-center">
+              <div class="col-auto">
+
+                <!-- Avatar -->
+                <a href="/inventory-list-cf.html" class="back-button"></a>
+
+              </div>
+              <div class="col ml-n3 ml-md-n2">
+
+                <!-- Pretitle -->
+                <h6 class="header-pretitle">
+                  Inventory
+                </h6>
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  2019 BMW M4 Competition
+                </h1>
+
+              </div>
+              <div class="col-12 col-md-auto mt-3 mt-md-0 active-toggle">
+                <span class="active-toggle__label">Active Listing</span>
+                <input class="active-toggle__input" type="checkbox">
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row align-items-center">
+              <div class="col">
+
+                <!-- Nav -->
+                <ul class="nav nav-tabs nav-overflow header-tabs">
+                  <li class="nav-item">
+                    <a href="/inventory-edit-cf.html" class="nav-link">
+                      Preview
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/inventory-heading-cf.html" class="nav-link">
+                      Heading
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/inventory-photos-cf.html" class="nav-link">
+                      Photos
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/inventory-pricing-cf.html" class="nav-link">
+                      Pricing
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/inventory-cta-cf.html" class="nav-link">
+                      Call To Action
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/inventory-features-cf.html" class="nav-link">
+                      Features
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link">
+                      Description
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/" class="nav-link active">
+                      Card Callout
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- / .header -->
+
+      <!-- CONTENT -->
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row inventory-callout-cf-header">
+          <div class="col-12 col-xl-6">
+            <h2 class="">
+              Card callout
+            </h2>
+            <p class="gray-text">For a special focus on this individual listing, choose the most applicable option.</p>
+          </div>
+          <div class="col-12 col-xl-6 d-flex justify-content-center justify-content-xl-end align-items-center">
+              <a href="#" class="btn btn-primary">Save Changes</a>
+          </div>
+
+        </div>
+
+        <div class="row">
+            
+          <div class="col-12 col-lg-4 cf-inventory-callout__card-container">
+            <input id="card-toggle" class="cf-inventory-callout__card-toggle" type="checkbox">
+            <div class="card cf-inventory-callout__card">
+              <div class="card-body cf-inventory-callout__card-body">
+                <div class="cf-inventory-callout__card-title">
+                  <h2>Low Miles</h2>
+                </div>
+                <div class="cf-inventory-callout__card-btns">
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>English:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Low Miles</a>
+                  </div>
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>Espanol:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Millas Bajas</a>
+                  </div>
+                </div>  
+                <div class="cf-inventory-callout__color-selector">
+                  <a href="/">Change color</a>
+                </div> 
+              </div>
+            </div>
+          </div> 
+          
+          <div class="col-12 col-lg-4 cf-inventory-callout__card-container">
+            <input id="card-toggle" class="cf-inventory-callout__card-toggle" type="checkbox">
+            <div class="card cf-inventory-callout__card">
+              <div class="card-body cf-inventory-callout__card-body">
+                <div class="cf-inventory-callout__card-title">
+                  <h2>Price Reduced</h2>
+                </div>
+                <div class="cf-inventory-callout__card-btns">
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>English:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Price Reduced</a>
+                  </div>
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>Espanol:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Precio Reducido</a>
+                  </div>
+                </div>  
+                <div class="cf-inventory-callout__color-selector">
+                  <a href="/">Change color</a>
+                </div> 
+              </div>
+            </div>
+          </div> 
+
+          <div class="col-12 col-lg-4 cf-inventory-callout__card-container">
+            <input id="card-toggle" class="cf-inventory-callout__card-toggle" type="checkbox">
+            <div class="card cf-inventory-callout__card">
+              <div class="card-body cf-inventory-callout__card-body">
+                <div class="cf-inventory-callout__card-title">
+                  <h2>Just Added</h2>
+                </div>
+                <div class="cf-inventory-callout__card-btns">
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>English:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Just Added</a>
+                  </div>
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>Espanol:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Recien Agregado</a>
+                  </div>
+                </div>  
+                <div class="cf-inventory-callout__color-selector">
+                  <a href="/">Change color</a>
+                </div> 
+              </div>
+            </div>
+          </div> 
+
+          <div class="col-12 col-lg-4 cf-inventory-callout__card-container">
+            <input id="card-toggle" class="cf-inventory-callout__card-toggle" type="checkbox">
+            <div class="card cf-inventory-callout__card">
+              <div class="card-body cf-inventory-callout__card-body">
+                <div class="cf-inventory-callout__card-title">
+                  <h2>One Owner</h2>
+                </div>
+                <div class="cf-inventory-callout__card-btns">
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>English:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">One Owner</a>
+                  </div>
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>Espanol:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Un Dueno</a>
+                  </div>
+                </div>  
+                <div class="cf-inventory-callout__color-selector">
+                  <a href="/">Change color</a>
+                </div> 
+              </div>
+            </div>
+          </div> 
+
+          <div class="col-12 col-lg-4 cf-inventory-callout__card-container">
+            <input id="card-toggle" class="cf-inventory-callout__card-toggle" type="checkbox">
+            <div class="card cf-inventory-callout__card">
+              <div class="card-body cf-inventory-callout__card-body">
+                <div class="cf-inventory-callout__card-title">
+                  <h2>OEM Certified</h2>
+                </div>
+                <div class="cf-inventory-callout__card-btns">
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>English:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">OEM Certified</a>
+                  </div>
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>Espanol:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Certificado OEM</a>
+                  </div>
+                </div>  
+                <div class="cf-inventory-callout__color-selector">
+                  <a href="/">Change color</a>
+                </div> 
+              </div>
+            </div>
+          </div> 
+
+          <div class="col-12 col-lg-4 cf-inventory-callout__card-container">
+            <input id="card-toggle" class="cf-inventory-callout__card-toggle" type="checkbox">
+            <div class="card cf-inventory-callout__card">
+              <div class="card-body cf-inventory-callout__card-body">
+                <div class="cf-inventory-callout__card-title">
+                  <h2>Special Offer</h2>
+                </div>
+                <div class="cf-inventory-callout__card-btns">
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>English:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Special Offer</a>
+                  </div>
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>Espanol:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Oferta Especial</a>
+                  </div>
+                </div>  
+                <div class="cf-inventory-callout__color-selector">
+                  <a href="/">Change color</a>
+                </div> 
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-lg-4 cf-inventory-callout__card-container">
+            <input id="card-toggle" class="cf-inventory-callout__card-toggle" type="checkbox">
+            <div class="card cf-inventory-callout__card">
+              <div class="card-body cf-inventory-callout__card-body">
+                <div class="cf-inventory-callout__card-title">
+                  <h2>Fully Loaded</h2>
+                </div>
+                <div class="cf-inventory-callout__card-btns">
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>English:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Fully Loaded</a>
+                  </div>
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>Espanol:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Todas Las Opciones</a>
+                  </div>
+                </div>  
+                <div class="cf-inventory-callout__color-selector">
+                  <a href="/">Change color</a>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4 cf-inventory-callout__card-container">
+            <input id="card-toggle" class="cf-inventory-callout__card-toggle" type="checkbox">
+            <div class="card cf-inventory-callout__card">
+              <div class="card-body cf-inventory-callout__card-body">
+                <div class="cf-inventory-callout__card-title">
+                  <h2>Photos Coming Soon</h2>
+                </div>
+                <div class="cf-inventory-callout__card-btns">
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>English:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Photos Coming Soon</a>
+                  </div>
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>Espanol:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">Fotos Proximamente</a>
+                  </div>
+                </div>  
+                <div class="cf-inventory-callout__color-selector">
+                  <a href="/">Change color</a>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4 cf-inventory-callout__card-container">
+            <input id="card-toggle" class="cf-inventory-callout__card-toggle" type="checkbox">
+            <div class="card cf-inventory-callout__card">
+              <div class="card-body cf-inventory-callout__card-body">
+                <div class="cf-inventory-callout__card-title">
+                  <h2>In Transit</h2>
+                </div>
+                <div class="cf-inventory-callout__card-btns">
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>English:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">In Transit</a>
+                  </div>
+                  <div class="cf-inventory-callout__card-btn-wrapper">
+                    <p>Espanol:</p>
+                    <a href="#" class="btn cf-inventory-callout__btn">En Transito</a>
+                  </div>
+                </div>  
+                <div class="cf-inventory-callout__color-selector">
+                  <a href="/">Change color</a>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        
+
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>
