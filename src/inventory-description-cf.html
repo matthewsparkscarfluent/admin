@@ -39,7 +39,7 @@
 
     <!-- MAIN CONTENT
     ================================================== -->
-    <div class="main-content cf-inventory-photos">
+    <div class="main-content cf-inventory-heading">
 
       @@if (navPosition == 'combo' || demoMode) {
       @@include("partials/topbar.html")
@@ -93,7 +93,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/inventory-photos-cf.html" class="nav-link active">
+                    <a href="/inventory-photos-cf.html" class="nav-link">
                       Photos
                     </a>
                   </li>
@@ -113,7 +113,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/inventory-description-cf.html" class="nav-link">
+                    <a href="/inventory-description-cf.html" class="nav-link active">
                       Description
                     </a>
                   </li>
@@ -133,77 +133,34 @@
 
       <!-- CONTENT -->
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
-        <div class="row inventory-photos-cf-header">
+        <div class="row">
           <div class="col-12 col-xl-6">
             <h2 class="">
-              Rearrange, add, or remove photos
+              Vehicle description
             </h2>
-            <p class="gray-text">Drag and drop your photos in the order you'd like.  Your 1 position photo will be your main image. Your 1,2 and 3 position photos will be used in the listing card's view.</p>
+            <p class="gray-text">Use this section to edit the vehicle description. Editing the English section will automatically update the Spanish section and vice versa.</p>
           </div>
           <div class="col-12 col-xl-6 d-flex justify-content-center justify-content-xl-end align-items-center">
-              <a href="#" class="btn btn-secondary"><i class="fe fe-download"></i> Upload Photos</a>
               <a href="#" class="btn btn-primary">Save Changes</a>
           </div>
 
         </div>
 
-        <div class="row photo-upload__container">
-            <div class="col-12">
-                
-                <!-- Dropzone -->
-              <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-options='{"url": "https://", "thumbnailWidth": "300", "thumbnailHeight": "169"}'>
-
-                <!-- Fallback -->
-                <div class="fallback">
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="customFileUploadMultiple" multiple>
-                    <label class="custom-file-label" for="customFileUploadMultiple">Choose file</label>
+        <div class="row py-5">
+            <div class="col-12 col-xl-6">
+                <h3>English description</h3>
+                <div class="input-group input-group-merge">
+                    <textarea type="text" class="form-control" rows="7" placeholder="English Description"></textarea>
                   </div>
-                </div>
-
-                <!-- Preview -->
-                <div class="dz-preview photo-upload rounded">
-                  <div class="list-group-item photo-upload__item drag-item">
-                    <div class="flex-column align-items-center">
-                      <div class="col-auto photo-upload__card">
-
-                        <!-- Control Bar -->
-                        <div class="photo-upload__controls d-flex align-items-center">
-                          <div class="photo-upload__control photo-upload__control--drag">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g><circle class="st0" cx="9" cy="9" r="5"></circle> <circle class="st0" cx="24" cy="9" r="5"></circle> <circle class="st0" cx="39" cy="9" r="5" class="st0"></circle> <circle class="st0" cx="9" cy="24" r="5"></circle> <circle cx="24" cy="24" r="5" class="st0"></circle> <circle class="st0" cx="39" cy="24" r="5"></circle> <circle cx="9" cy="39" r="5" class="st0"></circle> <circle class="st0" cx="24" cy="39" r="5"></circle> <circle cx="39" cy="39" r="5" class="st0"></circle></g></svg>
-                          </div>
-
-                          <select class="custom-select custom-select-sm" data-toggle="select">
-                            <option>Move</option>
-                            <option>Option</option>
-                            <option>Option</option>
-                          </select>
-
-                          <button class="btn btn-white btn-sm">
-                            Edit
-                          </button>
-
-                          <button class="btn btn-white btn-sm" data-dz-remove>
-                            <i class="fe fe-trash"></i>
-                          </button>
-
-                        </div>
-
-                        <!-- Image -->
-                        <div class="photo-upload__photo">
-                          <img src="data:image/svg+xml,%3csvg3c/svg%3e" alt="..." data-dz-thumbnail>
-                          <span id="photo-count"></span>
-                        </div>
-
-                      </div>
-                      
+            </div>
+            <div class="col-12 col-xl-6">
+                <h3>Spanish description</h3>
+                <div class="input-group input-group-merge">
+                  <textarea type="text" class="form-control" rows="7" placeholder="Spanish Description"></textarea>
                     </div>
                   </div>
-                </div>
-
-              </div>
-
             </div>
+
         </div>
 
       </div>
