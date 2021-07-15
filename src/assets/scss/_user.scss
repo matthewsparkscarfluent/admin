@@ -1002,9 +1002,34 @@ input[type="checkbox"].active-toggle__input{
                 margin: 0;
             }
         }
+
+        &__feature--color {
+            display: flex;
+            align-items: center;
+            border: 1px solid #D2DDEC;
+            padding: 0 0.75rem;
+            border-radius: 0.375rem;
+
+            .form-control, .input-group-text {
+                border: none;
+                padding: unset;
+            }
+
+            .form-control {
+                padding-left: 20px;
+            }
+
+            .btn-colorselector {
+                border-radius: 4px;
+            }
+        }
         
         &__feature-input {
             margin-left: auto;
+        }
+
+        .dropdown-colorselector > .dropdown-menu > li > .color-btn.selected::after {
+            display: none;
         }
     }
 

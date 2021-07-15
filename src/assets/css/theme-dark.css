@@ -12211,8 +12211,25 @@ input[type="checkbox"].active-toggle__input:checked:after {
   .cf-inventory-heading .main-info__feature-text p {
     margin: 0; }
 
+.cf-inventory-heading .main-info__feature--color {
+  display: flex;
+  align-items: center;
+  border: 1px solid #D2DDEC;
+  padding: 0 0.75rem;
+  border-radius: 0.375rem; }
+  .cf-inventory-heading .main-info__feature--color .form-control, .cf-inventory-heading .main-info__feature--color .input-group-text {
+    border: none;
+    padding: unset; }
+  .cf-inventory-heading .main-info__feature--color .form-control {
+    padding-left: 20px; }
+  .cf-inventory-heading .main-info__feature--color .btn-colorselector {
+    border-radius: 4px; }
+
 .cf-inventory-heading .main-info__feature-input {
   margin-left: auto; }
+
+.cf-inventory-heading .main-info .dropdown-colorselector > .dropdown-menu > li > .color-btn.selected::after {
+  display: none; }
 
 .inventory-photos-cf-header {
   position: -webkit-sticky;

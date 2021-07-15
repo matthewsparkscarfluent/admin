@@ -218,7 +218,7 @@
                   <div class="main-info__feature-text">
                     <p class="main-info__feature-text-title">Usage</p>
                     <p class="main-info__feature-text-description gray-text">
-                      Select status of vehicle use
+                      Status of vehicle use
                     </p>
                   </div>
 
@@ -257,7 +257,7 @@
                   <div class="main-info__feature-text">
                     <p class="main-info__feature-text-title">Mileage</p>
                     <p class="main-info__feature-text-description gray-text">
-                      Entere exact odometer reading
+                      Exact odometer reading
                     </p>
                   </div>
 
@@ -285,15 +285,31 @@
                   <div class="main-info__feature-text">
                     <p class="main-info__feature-text-title">Color</p>
                     <p class="main-info__feature-text-description gray-text">
-                      Select exterior color
+                      Name and display swatch
                     </p>
                   </div>
 
-                  <div class="main-info__feature-input">
-                    <select class="custom-select" data-toggle="select">
-                      <option>Blue</option>
-                      <option>Red</option>
+                  <div class="main-info__feature-input main-info__feature--color">
+
+                    <select id="colorselector">
+                      <option value="106" data-color="#A0522D">sienna</option>
+                      <option value="47" data-color="#0000fd" selected="selected">blue</option>
+                      <option value="87" data-color="#FF4500">orangered</option>
+                      ...
+                      <option value="15" data-color="#DC143C">crimson</option>
+                      <option value="24" data-color="#FF8C00">darkorange</option>
+                      <option value="78" data-color="#C71585">mediumvioletred</option>
                     </select>
+
+                    <div class="input-group input-group-merge">
+                      <input type="text" class="form-control form-control-appended" placeholder="Color">
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <span class="input-action input-action__odometer"></span>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
 
                 </div>
@@ -316,7 +332,7 @@
                   <div class="main-info__feature-text">
                     <p class="main-info__feature-text-title">Doors</p>
                     <p class="main-info__feature-text-description gray-text">
-                      Select amount of doors on the vehicle
+                      Amount of doors on vehicle
                     </p>
                   </div>
 
@@ -347,7 +363,7 @@
                   <div class="main-info__feature-text">
                     <p class="main-info__feature-text-title">Transmission</p>
                     <p class="main-info__feature-text-description gray-text">
-                      Select the transmission type
+                      Type of vehicle drivetrain
                     </p>
                   </div>
 
@@ -383,7 +399,7 @@
                   <div class="main-info__feature-text">
                     <p class="main-info__feature-text-title">Engine</p>
                     <p class="main-info__feature-text-description gray-text">
-                      Enter engine info
+                      Specific engine name
                     </p>
                   </div>
 
@@ -413,6 +429,10 @@
     <!-- JAVASCRIPT
     ================================================== -->
     @@include("partials/scripts.html")
+
+    <script>
+      $('#colorselector').colorselector();
+    </script>
 
   </body>
 </html>
